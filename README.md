@@ -1,8 +1,7 @@
-## Gallery-App
+## Awwards
 
 ### Description
-_Gallery app that helps a user to store images specifying there location and category.Also enables a user to copy an image._
-
+_An app that allows other users to rate and provide feedback for your work_
 ### Author
 _amin egal_
 
@@ -16,7 +15,12 @@ _amin egal_
            ``` pyhton3.6 manage.py server ```
 
 ### BDD
-
+| Behavior  |Input   | Output  |
+|:-:|---|---|
+| first a user has to register  | fill in registration form  |  login form  |
+| login form after registration  |  fill the form  | taken to the homepae  |
+| add project  | appears on homepage  |a user sees all of the details   |
+|  add profile | fill in your bio,content and a profile pic  | profile appears  |
 
 ### Technologies Used
 * CSS.
