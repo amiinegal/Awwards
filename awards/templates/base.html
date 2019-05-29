@@ -1,28 +1,31 @@
-{% load bootstrap4 %} {% load static%}
+{% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8"> {% if title %}
-  <title>  - {{title}}</title>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title><i class="fas fa-award"></i> Awards - {{title}}</title>
   {% else %}
-  <title>  </title>
-  {% endif %} {% block styles %} {% bootstrap_css %}
-  <link rel="stylesheet" href="{% static 'css/modern-business.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>Awards </title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
   {% endblock %}
+
 </head>
+<body style="font-size:23px;background-color: silver;">
+    {% include "navbar.html" %}
 
-<body>
-  {% include "home.html" %} {% block content %}
-  {%endblock%}
-  {% block scripts %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% block content %}{%endblock%}
 
-
-
-  {% bootstrap_javascript %} {% endblock %}
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
 </body>
-
 </html>
