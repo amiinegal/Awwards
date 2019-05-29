@@ -3,7 +3,7 @@
          
     
           
-          <ul class="nav navbar-nav navbar-left">
+          <ul class="nav navbar-nav navbar-right">
             <li>
                 <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}" style="margin-top:5px;">
                     <input class="form-control my-2 my-sm-0 search-input" name="project" type="search" placeholder="Search Project Name" aria-label="Search" style="font-size:20px;">
@@ -20,7 +20,7 @@
             
             {% if user.is_authenticated %}
             <li>
-                <a class="nav-link"href="/logout" style="float: left;">
+                <a class="nav-link"href="/logout">
                     Logout |
                 </a>
             </li>
