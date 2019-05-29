@@ -1,0 +1,202 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Awwards - website Awwards</title>
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-black bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Home</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/register">Register</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+            <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-4 navbar-right">
+
+          <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+  
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="project">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+  
+          </form>
+        </div>
+    </div>
+  </nav>
+
+  <header>
+
+      <div class="carousel-inner" role="listbox">        
+        <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1478358161113-b0e11994a36b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')">
+          <div class="container">
+          <div class="box">
+            <div class="chart" data-percent="73">73%</div>
+            </div>
+            <div class="box">
+              <div class="chart" data-percent="73">90%</div>
+              </div>
+              <div class="box">
+                <div class="chart" data-percent="73">53%</div>
+                </div>
+                <div class="box">
+                  <div class="chart" data-percent="73">83%</div>
+                  </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <a href="#"></a>
+          
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <a href="#"></a>
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1525604499593-d92408d2adbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+            <a href="#"></a>
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1545805523-45ff2b97a766?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+          <div class="card-footer">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"></a>
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1495553715023-a3c367bb8620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#">></a>
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1492446845049-9c50cc313f00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"></a>
+          <div class="card-body">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1511198324149-f841b4926739?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+      
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1527509602458-3a3d3f9c61d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+       
+      </div>
+      <div class="col-md-4">
+      
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="{% static 'js/jquery.easypiechart.js' %}"></script>
+  <script>
+    $(function() {
+        $('.chart').easyPieChart({
+            //your options goes here
+        });
+    });
+</script>
+</body>
+
+</html>
