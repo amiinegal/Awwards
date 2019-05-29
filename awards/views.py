@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render, redirect,get_object_or_404
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .forms import RegistrationForm, ProjectForm, ProfileForm
+from .models import Profile,Project, Reviews
 
 # Create your views here.
 @login_required(login_url='/accounts/login/')
@@ -9,8 +13,6 @@ def home_page(request):
 
 def home(request):
     images = Project.get_images()
-    
-
     return render(request, 'home.html', {'images':images})
     
 def register(request):
@@ -29,7 +31,7 @@ def register(request):
 def profile(request, username):
     profile = User.objects.get(username=username)
     try:
-        profile_info = Profile.get_profile(profile.id)
+        profile_info = Profile.get(profile.id)
     except:
         profile_info = Profile.filter_by_id(profile.id)
     projects = Project.get_profile_image(profile.id)
