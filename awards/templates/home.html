@@ -4,12 +4,10 @@
 {% block content%}
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-   
-
 </head>
 <body>
-    <div class="container-fluid" style="background-color:white;">
-        <div class="jumbotron" style="background-image: url(https://images.pexels.com/photos/2098604/pexels-photo-2098604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); background-size:contain;">
+    <div class="container-fluid" style="background-color:rgb(26, 3, 18);">
+        <div class="container" style="background-image: url(https://images.pexels.com/photos/2098604/pexels-photo-2098604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); background-size:contain; height: 500px; background-color: blueviolet" >
             
             <p class="text-center" style="font-weight:bolder;font-style: italic;font-size:27px;">Award your projects here.</p>
             
@@ -18,19 +16,13 @@
             </div>
             <div class="container-fluid">
             <div class="row">
-               
-                <div class="col-md-4"></div>
-                <div class="col-md-6">
+                    <div class="col-md-8">
                         {% for img in images%}
-                
                     <div class="card" style="width: 18rem;border:hidden;" data-toggle="modal" data-target="#{{img.id}}">
                             <a href="{% url 'profile' username=img.user_profile.username %}" style="font-weight:bolder;">{{img.user_profile.username}}</a>
                             <img class="card-img-top" src="{{img.photo.url}}" alt="Card image cap" class="img-responsive" style="height:400px;width:400px;border-radius:20px;">
                             <div class="card-body">
-                              <h5 class="card-title"></h5>
-                                   
-
-                              
+                              <h5 class="card-title"></h5>       
                    </div>
                    </div>
                         <div style="font-weight:bold;font-family: 'Montserrat', sans-serif;">
@@ -49,14 +41,9 @@
     
                             {% empty %}
                             <h2>Upload a project to view it here.</h2>
-    
-                            
-                        
-                   
                     {% endfor %} 
                 </div>
-                <div class="col-md-2"></div>
-
+            </div>
             </div>
             </div>
 

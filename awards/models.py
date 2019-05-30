@@ -35,17 +35,17 @@ class Project(models.Model):
         projects = Project.objects.filter(user_profile__pk=profile)
         return projects
 
-    def design_rating(self):
-        all_designs =list( map(lambda x: x.design, self.reviews.all()))
-        return np.mean(all_designs)
+    # def design_rating(self):
+    #     all_designs =list( map(lambda x: x.design, self.reviews.all()))
+    #     return np.mean(all_designs)
 
-    def usability_rating(self):
-        all_usability =list( map(lambda x: x.usability, self.reviews.all()))
-        return np.mean(all_usability)
+    # def usability_rating(self):
+    #     all_usability =list( map(lambda x: x.usability, self.reviews.all()))
+    #     return np.mean(all_usability)
 
-    def content_rating(self):
-        all_content =list( map(lambda x: x.content, self.reviews.all()))
-        return np.mean(all_content)
+    # def content_rating(self):
+    #     all_content =list( map(lambda x: x.content, self.reviews.all()))
+    #     return np.mean(all_content)
 
 
 class Profile(models.Model):
