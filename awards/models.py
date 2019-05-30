@@ -49,7 +49,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
-    profile_photo = models.ImageField(upload_to ='picture/')
+    profile_photo = models.ImageField('picture/')
     bio = HTMLField()
     phone = models.IntegerField(default=0) 
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
